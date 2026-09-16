@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beyond Limits — 4 UI variations</title><link rel="stylesheet" href="lab.css">
+<style>
+body{display:grid;place-items:center;min-height:100vh;padding:40px 20px}
+.wrap{position:relative;z-index:10;width:min(1180px,94vw)}
+h1{font-size:clamp(28px,3.6vw,46px);letter-spacing:-.035em;margin:14px 0 10px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+.card{display:block;padding:0;overflow:hidden;border-radius:24px;transition:transform .28s cubic-bezier(.2,.8,.25,1),box-shadow .28s}
+.card:hover{transform:translateY(-5px)}
+.card .shot{height:186px;background-size:cover;background-position:center;position:relative}
+.card .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(6,9,15,.85))}
+.card .meta{padding:18px 20px 20px}
+.card h3{font-size:19px;margin-bottom:6px}
+.card p{margin:0;font-size:13.4px;color:var(--ink-3);line-height:1.55}
+.card .num{position:absolute;top:12px;left:14px;z-index:2;font-family:var(--f-m);font-size:11px;letter-spacing:.16em;background:rgba(6,9,15,.6);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:3px 10px;backdrop-filter:blur(8px)}
+.tag{display:inline-block;margin-top:12px;font-family:var(--f-m);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--solar)}
+</style></head><body>
+<div class="wall"><img src="walls/v4.jpg" alt=""><div class="scrim"></div><div class="grain"></div></div>
+<div class="wrap">
+  <span class="eyebrow">Beyond Limits · design lab</span>
+  <h1>Four ways to upgrade<br>the console.</h1>
+  <p class="tsm" style="color:rgba(255,255,255,.78);max-width:64ch;margin:0">Same data, same navy-and-solar identity, four completely different organising ideas. Every one uses live liquid glass over an animated wallpaper, cuts the navigation down, and gives each screen exactly one primary action.</p>
+  <div class="cards">
+    <a class="card glass lit" href="v1-command-deck.html">
+      <div class="shot" style="background-image:url('walls/v2.jpg')"><span class="num">VARIATION 01</span></div>
+      <div class="meta"><h3>Command Deck</h3>
+        <p>Icon dock + bento grid. Everything at a glance for someone who already knows the product. Dense but calm: 6 dock icons, 6 tiles, one hero action.</p>
+        <span class="tag">Best for · daily overview</span></div></a>
+    <a class="card glass lit" href="v2-today.html">
+      <div class="shot" style="background-image:url('walls/v3.jpg')"><span class="num">VARIATION 02</span></div>
+      <div class="meta"><h3>Today</h3>
+        <p>Radically reduced: three tabs, one page, a numbered list of what needs a human. Turns a 24-screen console into a morning briefing.</p>
+        <span class="tag">Best for · "just tell me what to do"</span></div></a>
+    <a class="card glass lit" href="v3-spotlight.html">
+      <div class="shot" style="background-image:url('walls/v4.jpg')"><span class="num">VARIATION 03</span></div>
+      <div class="meta"><h3>Spotlight</h3>
+        <p>A live widget field under a ⌘K command palette. No menus to learn — type "issue codes" or "Ethan" and go straight there.</p>
+        <span class="tag">Best for · keyboard speed</span></div></a>
+    <a class="card glass lit" href="v4-atlas.html">
+      <div class="shot" style="background-image:url('walls/v1.jpg')"><span class="num">VARIATION 04</span></div>
+      <div class="meta"><h3>Atlas</h3>
+        <p>Four plain-English groups instead of 24 links, each saying what it is for, plus a lean mode that hides anything unused for 30 days.</p>
+        <span class="tag">Best for · onboarding new staff</span></div></a>
+  </div>
+</div>
+</body></html>
