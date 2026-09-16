@@ -1,70 +1,59 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Beyond Limits — four directions</title><link rel="stylesheet" href="dl.css">
+<title>Beyond Limits — built to real design systems</title><link rel="stylesheet" href="dl.css">
 <style>
-:root{--bg:#FBF8F2;--card:#fff;--soft:#F6F3EC;--line:#EAE4D8;--line-2:#DCD4C4;--tint:#FBF8F2;
-  --ink:#12233D;--ink-2:#3D4E68;--ink-3:#6E7B90;--ink-4:#98A2B3;
-  --brand:#183868;--accent:#F0C63C;--accent-strong:#E0AE22;--accent-soft:#FDF6E1;--accent-line:#F0E2B4;--accent-ink:#2A2205;--accent-ink2:#8A6A0B}
-.hi{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(36px,5vw,64px);line-height:1.03;letter-spacing:-.02em}
-.hi em{font-style:italic;color:var(--brand)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+:root{--bg:#F7F4EE;--card:#fff;--soft:#F6F3EC;--line:#E8E2D6;--line-2:#D8D1C2;--tint:#F6F3EC;
+ --ink:#161C26;--ink-2:#3E4757;--ink-3:#6C7484;--ink-4:#9AA1AE;--brand:#183868;--accent:#E8B84B;--accent-strong:#D9A32C;--accent-soft:#FDF4E1;--accent-line:#F0E0BC;--accent-ink:#2A2205;--accent-ink2:#8A6A0B}
+.hi{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,4.6vw,58px);line-height:1.05;letter-spacing:-.015em}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
 @media(max-width:960px){.grid{grid-template-columns:1fr}}
-.tile{display:block;border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line);
-  box-shadow:0 1px 2px rgba(20,32,54,.04),0 20px 50px -30px rgba(20,32,54,.3);transition:.3s cubic-bezier(.2,.8,.25,1)}
-.tile:hover{transform:translateY(-5px);box-shadow:0 3px 6px rgba(20,32,54,.05),0 40px 80px -34px rgba(20,32,54,.42)}
-.shot{position:relative;height:270px;overflow:hidden;border-bottom:1px solid var(--line);background:var(--soft)}
-.shot iframe{position:absolute;top:0;left:0;width:1500px;height:1100px;border:0;transform:scale(.4);transform-origin:0 0;pointer-events:none}
-.tile .meta{padding:24px 26px 26px}
-.tag{display:inline-block;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink2)}
-.pill{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:7px 14px;font-size:12.5px}
+.tile{display:block;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 1px 2px rgba(20,32,54,.05),0 22px 54px -30px rgba(20,32,54,.34);transition:.3s cubic-bezier(.2,.8,.25,1)}
+.tile:hover{transform:translateY(-5px);box-shadow:0 3px 6px rgba(20,32,54,.06),0 42px 84px -34px rgba(20,32,54,.44)}
+.shot{position:relative;height:300px;overflow:hidden;border-bottom:1px solid var(--line);background:var(--soft)}
+.shot iframe{position:absolute;top:0;left:0;width:1500px;height:1180px;border:0;transform:scale(.4);transform-origin:0 0;pointer-events:none}
+.meta{padding:26px 28px 28px}
+.src{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A6A0B}
+h3{font-size:23px;margin:10px 0 0}
+p{font-size:14.5px;color:var(--ink-3);line-height:1.7;margin:10px 0 0}
+.kv{margin-top:16px;font-size:12.5px;color:var(--ink-4);font-family:'JetBrains Mono',monospace;line-height:1.7}
+.minor{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+@media(max-width:900px){.minor{grid-template-columns:1fr 1fr}}
+.minor a{padding:20px;border-radius:16px;background:#fff;border:1px solid var(--line);font-size:14px;font-weight:600;transition:.24s}
+.minor a:hover{transform:translateY(-3px)}
+.minor span{display:block;font-size:12.5px;color:var(--ink-4);font-weight:400;margin-top:6px}
 </style></head><body>
 <div class="ground g-paper"></div>
-<div class="wrap" style="padding:34px 0 90px">
+<div class="wrap" style="padding:40px 0 90px">
   <header class="row">
     <img src="brand/favicon.png" alt="" style="height:32px;width:32px;border-radius:10px" onerror="this.style.display='none'">
     <div><div style="font-family:'Sora';font-weight:600;font-size:15.5px">Beyond Limits</div><div class="txs" style="color:var(--ink-4)">Design directions</div></div>
-    <div class="spacer row" style="gap:10px"><span class="pill">Light, editorial, calm</span><span class="pill">4 directions</span></div>
+    <div class="spacer row" style="gap:10px">
+      <a class="btn btn-ghost btn-sm" href="systems.html">The 10 systems</a>
+      <span class="chip">Built to real tokens</span>
+    </div>
   </header>
-  <section class="rise" style="margin-top:56px;max-width:830px">
-    <div class="eyebrow">A second pass, built from your references</div>
-    <h1 class="hi" style="margin:18px 0 16px">Four directions for the console,<br>each <em>quietly expensive</em>.</h1>
-    <p class="tsm" style="color:var(--ink-3);font-size:15.5px;max-width:66ch">The first attempt was dark, neon and techy — which is the opposite of nearly every reference you sent. Off-white grounds, pure white cards, one deep brand colour, a classic serif against a clean grotesque, and a great deal of space. Same data, same program, four different personalities.</p>
+  <section style="margin-top:52px;max-width:840px">
+    <div class="eyebrow">Your picks · rebuilt from their real DESIGN.md</div>
+    <h1 class="hi" style="margin:18px 0 16px">Two directions, built to<br>someone else's real system.</h1>
+    <p style="font-size:15.5px;color:var(--ink-3);max-width:68ch;margin:0">Not my palette this time. Every colour, radius, border weight, type scale and spacing value below is taken from the published design system of a real product — Duolingo and Authkit — including the rules their own designers wrote about what you must <i>not</i> do.</p>
   </section>
   <div class="grid">
-    <a class="tile rise" href="v1-paper.html">
-      <div class="shot"><iframe src="v1-paper.html" loading="lazy" scrolling="no"></iframe></div>
-      <div class="meta"><h3 style="font-size:21px">Paper</h3>
-        <p class="tsm" style="color:var(--ink-3);margin-top:8px">Warm cream ground, navy ink, an editorial serif for the greeting, hairline rules instead of borders. Reads like a well-set annual report.</p>
-        <span class="tag">Warmest · best for trust</span></div></a>
-    <a class="tile rise" href="v2-studio.html">
-      <div class="shot"><iframe src="v2-studio.html" loading="lazy" scrolling="no"></iframe></div>
-      <div class="meta"><h3 style="font-size:21px">Studio</h3>
-        <p class="tsm" style="color:var(--ink-3);margin-top:8px">Pure white, one deep navy stage carrying the single most important action, and a yellow used exactly once. Precise, symmetrical, unhurried.</p>
-        <span class="tag">Cleanest · best for focus</span></div></a>
-    <a class="tile rise" href="v3-atelier.html">
-      <div class="shot"><iframe src="v3-atelier.html" loading="lazy" scrolling="no"></iframe></div>
-      <div class="meta"><h3 style="font-size:21px">Atelier</h3>
-        <p class="tsm" style="color:var(--ink-3);margin-top:8px">Soft sage, blush, sky and butter cards — each track its own colour — with families as rounded cards you can read at a glance.</p>
-        <span class="tag">Friendliest · best for families</span></div></a>
-    <a class="tile rise" href="v4-nocturne.html">
-      <div class="shot" style="background:#0A1B33"><iframe src="v4-nocturne.html" loading="lazy" scrolling="no"></iframe></div>
-      <div class="meta"><h3 style="font-size:21px">Nocturne</h3>
-        <p class="tsm" style="color:var(--ink-3);margin-top:8px">The one dark direction — deep navy, an elegant serif, fine gold hairlines and gold used once. Cinematic rather than technical.</p>
-        <span class="tag">Most premium · best for donors</span></div></a>
+    <a class="tile" href="dir-daylight.html">
+      <div class="shot"><iframe src="dir-daylight.html" loading="lazy" scrolling="no"></iframe></div>
+      <div class="meta"><div class="src">System · Duolingo</div>
+        <h3>Daylight</h3>
+        <p>Flat sticker surfaces, 12px radius on everything, thick 2px borders, and a deliberate ban on shadows, gradients and glass. Green carries progress, blue carries interaction, and the body stays mid-grey so colour leads.</p>
+        <div class="kv">#58cc02 progress · #1cb0f6 links · #777777 body · 12px everywhere · 2px borders</div></div></a>
+    <a class="tile" href="dir-midnight.html">
+      <div class="shot" style="background:#05060f"><iframe src="dir-midnight.html" loading="lazy" scrolling="no"></iframe></div>
+      <div class="meta"><div class="src">System · Authkit</div>
+        <h3>Midnight</h3>
+        <p>A near-black canvas with a faint blueprint grid, glass plates that get their depth from inset frost highlights and soft halos rather than drop shadows, and one violet reserved exclusively for the primary action.</p>
+        <div class="kv">#05060f canvas · #663af3 one CTA · #d1e4fa text · 999px pills · 16px cards</div></div></a>
   </div>
-  <div class="rise" style="margin-top:44px" class="row">
-    <div class="card pad" style="max-width:840px">
-      <div class="eyebrow">What changed and why</div>
-      <div class="tsm" style="color:var(--ink-2);margin-top:14px;line-height:1.85">
-        <div style="padding:10px 0;border-bottom:1px solid var(--line)"><b style="font-weight:600">Ground</b> — off-white paper and pure white instead of near-black. Every reference leans light.</div>
-        <div style="padding:10px 0;border-bottom:1px solid var(--line)"><b style="font-weight:600">Type</b> — an editorial serif for display against a clean grotesque for the interface, with mono reserved for codes and labels.</div>
-        <div style="padding:10px 0;border-bottom:1px solid var(--line)"><b style="font-weight:600">Colour</b> — one deep brand colour doing all structural work; the yellow appears once per screen, never as a theme.</div>
-        <div style="padding:10px 0"><b style="font-weight:600">Space</b> — bigger padding, fewer panels, one primary action per view. The old versions tried to show everything at once.</div>
-      </div>
-    </div>
+  <div class="minor">
+    <a href="v1-paper.html">Paper<span>Earlier warm-editorial take, my own palette</span></a>
+    <a href="v2-studio.html">Studio<span>Earlier white console, my own palette</span></a>
+    <a href="v3-atelier.html">Atelier<span>Earlier pastel track cards</span></a>
+    <a href="v4-nocturne.html">Nocturne<span>Earlier dark direction</span></a>
   </div>
-</div>
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.04});
-document.querySelectorAll('.rise').forEach((el,i)=>{el.style.transitionDelay=(i*60)+'ms';io.observe(el);});
-setTimeout(()=>document.querySelectorAll('.rise:not(.in)').forEach(e=>e.classList.add('in')),1500);
-</script></body></html>
+</div></body></html>
