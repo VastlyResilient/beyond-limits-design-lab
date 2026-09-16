@@ -21,7 +21,7 @@
 .sub a{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:11px;font-size:13.6px;color:var(--ink-2);transition:.16s}
 .sub a:hover{background:rgba(255,255,255,.09);color:#fff}
 .sub a.on{background:rgba(254,222,39,.16);color:#fff;box-shadow:inset 0 0 0 1px rgba(254,222,39,.3)}
-.sub a .n{margin-left:auto;font-family:var(--f-m);font-size:10.5px;color:var(--ink-4)}
+.sub a .n{margin-left:auto;font-family:var(--f-m);font-size:11.5px;font-weight:600;color:var(--ink-3)}
 .chev{margin-left:auto;transition:transform .25s}
 .grp.open .chev{transform:rotate(180deg)}
 main{margin-left:278px;position:relative;z-index:10;padding:20px 26px 50px;max-width:1400px}
@@ -44,7 +44,7 @@ body.lean .adv{opacity:.32;filter:grayscale(1)}
 body.lean .advnote{display:block}
 .advnote{display:none;font-size:11.5px;color:var(--amber,#F5BB5C);padding:0 13px 6px}
 </style></head><body>
-<div class="wall"><img src="walls/v1.jpg" alt=""><div class="scrim"></div><div class="grain"></div></div>
+<div class="wall"><img src="walls/v5.jpg" alt=""><div class="scrim" style="background:linear-gradient(180deg,rgba(6,10,20,.52),rgba(6,10,20,.30) 45%,rgba(6,9,16,.68)),radial-gradient(120% 80% at 20% 10%,rgba(24,56,104,.34),transparent 62%)"></div><div class="grain"></div></div>
 
 <aside class="rail">
   <div class="row" style="padding:4px 8px 14px"><img src="brand/favicon.png" alt="" style="height:28px;width:28px;border-radius:8px" onerror="this.style.display='none'">
@@ -100,7 +100,7 @@ body.lean .advnote{display:block}
 
   <div style="padding:12px 8px 0"><div class="txs muted2" style="padding:0 8px 10px">Counts are work waiting on you, not items in each section.</div><div class="glass soft pad" style="padding:13px">
     <div class="row" style="margin-bottom:8px"><span class="eyebrow">Lean mode</span><span class="spacer tog" id="lean" style="width:40px;height:23px;border-radius:100px;background:rgba(255,255,255,.16);position:relative;cursor:pointer;display:inline-block"><i style="position:absolute;top:3px;left:3px;width:17px;height:17px;border-radius:50%;background:#fff;transition:.22s"></i></span></div>
-    <div class="txs muted2">Hides anything you have not used in 30 days. Twice as easy to scan.</div></div></div>
+    <div class="txs muted">Hides anything unused for 30 days.</div></div></div>
 </aside>
 
 <main>
@@ -133,14 +133,14 @@ body.lean .advnote{display:block}
     <table class="tbl">
       <thead><tr><th>Family</th><th>Code</th><th>Track</th><th>Grade</th><th>Language</th><th style="text-align:right">Sessions</th></tr></thead>
       <tbody>
-        <tr><td>Shalauddin, Ethan <span class="chip chip-red" style="margin-left:6px">duplicate</span></td><td><span class="mono-code">BL-2026-0002</span></td><td>Main + SCSE</td><td>7</td><td>English</td><td class="tnum" style="text-align:right">20 / 1 missed</td></tr>
-        <tr><td>Rojas, Annabella <span class="chip chip-amber" style="margin-left:6px">decide</span></td><td><span class="mono-code">BL-2026-0001</span></td><td>Main + SCSE</td><td>5</td><td>Spanish</td><td class="tnum" style="text-align:right">29 / 4 missed</td></tr>
-        <tr><td>Lopez, Anthony <span class="chip chip-amber" style="margin-left:6px">decide</span></td><td><span class="mono-code none">needs a code</span></td><td>Main + Starfish</td><td>9</td><td>Spanish</td><td class="tnum" style="text-align:right">23 / 4 missed</td></tr>
+        <tr><td>Shalauddin, Ethan <span class="chip chip-red" style="margin-left:6px;font-size:11px">duplicate</span></td><td><span class="mono-code">BL-2026-0002</span></td><td>Main + SCSE</td><td>7</td><td>English</td><td class="tnum" style="text-align:right">20 / 1 missed</td></tr>
+        <tr><td>Rojas, Annabella <span class="chip chip-amber" style="margin-left:6px;font-size:11px">decide</span></td><td><span class="mono-code">BL-2026-0001</span></td><td>Main + SCSE</td><td>5</td><td>Spanish</td><td class="tnum" style="text-align:right">29 / 4 missed</td></tr>
+        <tr><td>Lopez, Anthony <span class="chip chip-amber" style="margin-left:6px;font-size:11px">decide</span></td><td><span class="mono-code none">needs a code</span></td><td>Main + Starfish</td><td>9</td><td>Spanish</td><td class="tnum" style="text-align:right">23 / 4 missed</td></tr>
         <tr><td>Lopez, Mia</td><td><span class="mono-code none">needs a code</span></td><td>Main</td><td>6</td><td>English</td><td class="tnum" style="text-align:right">22 / 0 missed</td></tr>
         <tr><td>Rivas, Danna</td><td><span class="mono-code none">needs a code</span></td><td>Main</td><td>8</td><td>English</td><td class="tnum" style="text-align:right">30 / 0 missed</td></tr>
       </tbody>
     </table>
-    <div class="row txs muted" style="margin-top:14px"><span>Showing 5 of 104</span><span class="spacer mono">next code · BL-2026-0010</span></div>
+    <div class="row txs muted" style="margin-top:14px;gap:18px"><span>Showing 5 of 104</span><span class="chip" style="font-size:11px">next code · <b class="mono" style="margin-left:5px">BL-2026-0010</b></span><button class="btn btn-sm spacer">Export this view</button></div>
   </section>
 </main>
 
