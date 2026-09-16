@@ -28,7 +28,10 @@ kbd{font-family:var(--f-m);font-size:10.5px;background:rgba(255,255,255,.10);bor
 .corner{position:fixed;top:24px;left:30px;z-index:9;display:flex;align-items:center;gap:12px}
 .corner2{position:fixed;top:24px;right:30px;z-index:9;display:flex;align-items:center;gap:10px}
 </style></head><body>
-<div class="wall"><img src="walls/v4.jpg" alt=""><div class="scrim"></div><div class="grain"></div></div>
+<div class="wall"><img src="walls/v4.jpg" alt=""><div class="scrim"></div><div class="grain"></div>
+  <div class="specks"><i style="left:12%;top:70%;animation-delay:0s"></i><i style="left:28%;top:82%;animation-delay:2.4s"></i>
+  <i style="left:46%;top:64%;animation-delay:4.8s"></i><i style="left:64%;top:78%;animation-delay:1.6s"></i>
+  <i style="left:80%;top:60%;animation-delay:3.6s"></i><i style="left:92%;top:74%;animation-delay:6s"></i></div></div>
 
 <div class="corner"><img src="brand/favicon.png" alt="" style="height:28px;width:28px;border-radius:8px" onerror="this.style.display='none'">
   <span style="font-family:var(--f-d);font-weight:700;font-size:15px" class="free">Beyond Limits</span><span class="chip">Ops</span></div>
@@ -79,6 +82,8 @@ kbd{font-family:var(--f-m);font-size:10.5px;background:rgba(255,255,255,.10);bor
       <span class="chip">⌘K</span>
     </div>
     <div class="res" id="res"></div>
+    <div style="display:flex;gap:8px;padding:12px 20px 0;flex-wrap:wrap">
+      <span class="fpill on">All</span><span class="fpill">Do next</span><span class="fpill">Find</span><span class="fpill">Send</span><span class="fpill">Set up</span></div>
     <div class="foot">
       <span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span>
       <span class="spacer" style="margin-left:auto">Everything in the product, one search box</span>
@@ -121,6 +126,7 @@ draw('');
 q.addEventListener('input',()=>draw(q.value));
 q.addEventListener('focus',()=>document.body.classList.add('searching'));
 q.addEventListener('blur',()=>document.body.classList.remove('searching'));
+document.querySelectorAll('.fpill').forEach(p=>p.onclick=()=>{document.querySelectorAll('.fpill').forEach(q=>q.classList.remove('on'));p.classList.add('on');const v=p.textContent.trim();draw(v==='All'?'':v);});
 document.addEventListener('keydown',e=>{ if(e.key==='/'||((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k')){e.preventDefault();q.focus();}
   if(e.key==='Escape'){q.blur();} });
 setTimeout(()=>{document.querySelectorAll('.meter > i').forEach((el,i)=>{const w=el.dataset.w;setTimeout(()=>{el.style.width=w;},i*110);});},280);

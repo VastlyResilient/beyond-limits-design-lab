@@ -20,7 +20,9 @@
 .grp.open .sub{display:block}
 .sub a{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:11px;font-size:13.6px;color:var(--ink-2);transition:.16s}
 .sub a:hover{background:rgba(255,255,255,.09);color:#fff}
-.sub a.on{background:rgba(254,222,39,.16);color:#fff;box-shadow:inset 0 0 0 1px rgba(254,222,39,.3)}
+.sub a.on{background:rgba(254,222,39,.14);color:#fff;box-shadow:inset 0 0 0 1px rgba(254,222,39,.34)}
+.sub a.on::before{content:"";position:absolute;left:-8px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--solar);box-shadow:0 0 8px rgba(254,222,39,.7)}
+.sub a{position:relative}
 .sub a .n{margin-left:auto;font-family:var(--f-m);font-size:11.5px;font-weight:600;color:var(--ink-3)}
 .chev{margin-left:auto;transition:transform .25s}
 .grp.open .chev{transform:rotate(180deg)}
@@ -36,7 +38,7 @@ main{margin-left:278px;position:relative;z-index:10;padding:20px 26px 50px;max-w
 .farrow{color:var(--ink-4);padding:0 8px;font-family:var(--f-m)}
 .tbl{width:100%;border-collapse:collapse;font-size:13.4px}
 .tbl th{text-align:left;font-family:var(--f-m);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);padding:0 14px 12px;font-weight:600}
-.tbl td{padding:15px 14px;border-top:1px solid rgba(255,255,255,.09)}
+.tbl td{padding:15px 14px;border-top:1px solid rgba(255,255,255,.07)}
 .tbl tr:hover td{background:rgba(255,255,255,.05)}
 .tbl td:first-child{font-weight:650}
 .adv{opacity:1;transition:opacity .35s,filter .35s}
@@ -104,10 +106,10 @@ body.lean .advnote{display:block}
 </aside>
 
 <main>
-  <div class="glass lit hero rise"><div class="sheen"></div>>
+  <div class="glass lit lift hero rise"><div class="sheen"></div>>
     <div class="row"><span class="chip chip-solar">Start here</span><span class="chip">1 of 3 done</span>
       <span class="spacer chip chip-green"><span class="dot live"></span>hub live</span></div>
-    <h1>Get every family<br>their own code.</h1>
+    <h1>Get every family<br>their own <span class="gword">code</span>.</h1>
     <div class="tsm" style="color:rgba(255,255,255,.8);max-width:60ch">Beyond Limits is outside the district, so there is no school-assigned number. Your code is the only identity these families will have in ParentSquare — and 104 of them still don't have one.</div>
     <div class="flow">
       <div class="fnode" style="border-color:rgba(63,212,143,.4)"><span class="dot" style="background:#3FD48F"></span>Clean the list</div><span class="farrow">→</span>

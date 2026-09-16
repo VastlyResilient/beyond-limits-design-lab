@@ -73,3 +73,37 @@ a{color:inherit;text-decoration:none}
 /* sheen element fallback for pages that inject it */
 .sheen{position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
   background:linear-gradient(135deg,rgba(255,255,255,.11) 0%,rgba(255,255,255,.03) 26%,transparent 52%,rgba(255,255,255,.035) 100%)}
+
+/* ============ patterns harvested from the X reference set ============ */
+/* A#1 · shell-as-frosted-sheet over the wallpaper, so the wallpaper frames the app */
+.sheet{position:relative;z-index:10;margin:14px;border-radius:28px;overflow:hidden;
+  background:rgba(13,26,48,.34);border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
+  box-shadow:0 30px 90px rgba(3,8,18,.55),inset 0 1px 0 rgba(255,255,255,.18)}
+/* C#10 · asymmetric hover lift: 180ms in, 300ms out — reads snappier */
+.lift{transition:transform 300ms ease-in,box-shadow 300ms ease-in,border-color 300ms ease-in}
+.lift:hover{transform:translateY(-4px);border-color:rgba(254,222,39,.42);
+  box-shadow:0 6px 14px rgba(3,8,18,.3),0 26px 60px rgba(3,8,18,.5);transition-duration:180ms}
+/* C#5 · hotspot pulse — the solar accent's signature job */
+.hot{position:relative;width:9px;height:9px;border-radius:50%;background:var(--solar);flex:none}
+.hot::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:1.5px solid var(--solar);
+  animation:hotpulse 1600ms ease-out infinite}
+@keyframes hotpulse{0%{transform:scale(.8);opacity:.7}100%{transform:scale(2.4);opacity:0}}
+/* B#7 · hairline rules instead of borders on dense lists */
+.hair{border-bottom:1px solid rgba(255,255,255,.07)}
+.hair:last-child{border-bottom:0}
+/* C#7 · filter pill with a glow on select */
+.fpill{padding:6px 13px;border-radius:999px;font-size:12.5px;font-weight:650;cursor:pointer;
+  background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.24);color:var(--ink-2);transition:.2s ease-out}
+.fpill:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.fpill.on{background:rgba(254,222,39,.18);border-color:rgba(254,222,39,.55);color:#FFE874;
+  box-shadow:0 0 12px rgba(254,222,39,.35)}
+/* B#12 / C#9 · gradient-on-type for hero words only */
+.gword{background:linear-gradient(100deg,#fff 0%,#FFE874 46%,#FEDE27 60%,#fff 100%);-webkit-background-clip:text;
+  background-clip:text;color:transparent;background-size:220% 100%;animation:shimmer 7s ease-in-out infinite}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+/* C#8 · atmosphere specks */
+.specks{position:absolute;inset:0;pointer-events:none;z-index:1}
+.specks i{position:absolute;width:3px;height:3px;border-radius:50%;background:rgba(254,222,39,.5);
+  animation:rise 12s linear infinite}
+@keyframes rise{from{transform:translateY(12px);opacity:0}12%{opacity:.75}to{transform:translateY(-26px);opacity:0}}
